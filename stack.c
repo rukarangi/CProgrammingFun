@@ -33,10 +33,12 @@ int isEmpty(struct StackNode *root)
 void push(struct StackNode** root, int data)
 {
 	struct StackNode* stackNode = newNode(data); 
-	// Create the new newnode to be added
+	// Create the new newnode to be added and grab the pointer to it
 
 	stackNode->next = *root;
+	// Set stack node next to the ponter to root which is pointing to the last node
 	*root = stackNode;
+	// set the vlue of the root poiter to the new last node
 	/*
 	This part^^ Hard to get
 	first we grab the last node that root had and pass it to the next
