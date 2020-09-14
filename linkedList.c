@@ -13,14 +13,80 @@ void printList(struct Node* n)
 {
 	while (n != NULL)
 	{
-		printf("%d\n", n->data);
+		printf("\n%d\n", n->data);
 		n = n->next;
 	}
 }
 
-int main()
+void push(struct Node** headRef, int data)
 {
+	struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
+	newNode->data = data;
+	newNode->next = (*headRef);
+	(*headRef) = newNode;
+	/*
+	We pass a double pointer into this so that we can modify
+	the orignal head pointer ouside of this funcs
+	scope.
+	*/
+}
+
+void insertAfter(struct Node* prev, int data)
+{
+	if (prev == NULL)
+	{
+		printf("the given previous node cannot be NULL\n");
+		return;
+	}
+	struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
+	newNode->data = data;
+
+	newNode->next = prev->next;
+	prev->next = newNode;
+}
+
+void append(struct Node** headRef, int data)
+{
+	struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
+	newNode->data = data;
+
+	struct Node *last =  *headRef;
+
+	newNode->next = NULL;
+
+	if (*headRef == NULL)
+	{
+		*headRef = newNode;
+		return;
+	}
+
+	while (last->next != NULL)
+	{
+		last = last->next;
+	}
+
+	last->next = newNode;
+	return;
+}
+
+int main()
+{	
 	struct Node* head = NULL;
+
+	append(&head, 6);
+
+	push(&head, 7);
+
+	push(&head, 1);
+
+	append(&head, 4);
+
+	insertAfter(head->next, 8);
+
+	printf("\nCreated linked list is:");
+	printList(head);
+
+	/*struct Node* head = NULL;
 	struct Node* second = NULL;
 	struct Node* third = NULL;
 
@@ -40,7 +106,7 @@ int main()
 	third->next = NULL;
 	// assign the last pinter to nothing
 
-	printList(head);
+	printList(head);*/
 
 	return 0;
 }
