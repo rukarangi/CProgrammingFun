@@ -1,3 +1,7 @@
-CProgramming Fun
+# CProgramming Fun
 
-This repository is to save and browse fun c things I'm learning about.
+This repository provides a place to save all my little C expirments and learning programs.
+
+### Data Structures
+* Linked list
+* Stack
