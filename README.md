@@ -9,3 +9,4 @@ This repository provides a place to save all my little C expirments and learning
 ### Socket Programming
 * Socket Info 1 - just some struct to refer to
 * Show Ip - shows the ipv4 and ipv6 address of a url - Example of getaddrinfo()
+* Server1 - basic helloworld server --IN PROGRESS
