@@ -88,9 +88,9 @@ int main(int argc, char* argv[argc+1])
 	};
 	double B[19];
 
-	TopDownMergeSort(A, B, ARR_SIZE);
+	TopDownMergeSort(A, B, 19);
 
-	for (size_t i = 0; i < ARR_SIZE; ++i)
+	for (size_t i = 0; i < 19; ++i)
 	{
 		printf("Array A at: %ld is: %f\n",i , A[i]);
 	}
