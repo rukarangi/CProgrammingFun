@@ -59,5 +59,6 @@ int main(void)
 
 	printf("linear test of %f with F(): %f and F`(): %f\n\n",
 			num, testNs, testDs);
+
 	return 0;
 }
