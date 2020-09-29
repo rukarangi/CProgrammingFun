@@ -13,8 +13,9 @@ This repository provides a place to save all my little C expirments and learning
 
 ### ModernC
 Challenges for ModerC book
-* Challenge 1 - Merge sort -completed and quick sort -to be completed
+* Challenge 1 - Merge sort -completed and quick sort --IN PROGRESS
 * Challenge 2 - Derivative -simple version, finds gradient to 6 decimal places
+* Challenge 4 - Union-Find -implement forest data structure with methods --IN PROGRESS
 
 ## Run
 
