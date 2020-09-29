@@ -12,7 +12,7 @@ This repository provides a place to save all my little C expirments and learning
 * Server1 - basic helloworld server --IN PROGRESS
 
 ### ModernC
-Challenges for ModerC book
+Challenges for ModernC book
 * Challenge 1 - Merge sort -completed and quick sort --IN PROGRESS
 * Challenge 2 - Derivative -simple version, finds gradient to 6 decimal places
 * Challenge 4 - Union-Find -implement forest data structure with methods --IN PROGRESS
@@ -20,3 +20,4 @@ Challenges for ModerC book
 ## Run
 
 gcc-8 -std=c11 --file--.c -o builds/--file-- -lm -Wall
+./builds/--file--
