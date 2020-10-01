@@ -16,6 +16,7 @@ Challenges for ModernC book
 * Challenge 1 - Merge sort -completed and quick sort --IN PROGRESS
 * Challenge 2 - Derivative -simple version, finds gradient to 6 decimal places
 * Challenge 4 - Union-Find -implement forest data structure with methods --IN PROGRESS
+* Challenge 5 - Complex Derivative -build off Challenge 3 added compatiblilty with complex numbers and used comlex version of functions
 
 ## Run
 
