@@ -27,6 +27,7 @@ int main(void)
 	//printf("exercise 15 \n%d\n%d\n%d\n", uBool, uChar, uShort);
 
 	// exs 22 - 27
+	printf("\nexercises 22 through 27\n");
 	// bit wise operations
 
 	unsigned short V = 0xFFFF; // = 65535 = 1111111111111111
@@ -85,6 +86,7 @@ int main(void)
 	printf("these two NEGATIONSs are the same: %hu %hu\n", nEGb, nEGnOTbPlus1);
 
 	// exs 28 - show that lost bits in x >> n = x % (1U << n)
+	printf("\nexercise 28\n");
 	unsigned short x = 0x00F3; // = 243
 	unsigned short n = 0x0002; // = 2
 
@@ -111,6 +113,38 @@ int main(void)
 	printf("the right shift x of n: x >> n = %hu >> %hu = %hu \n", x, n, rIGHT);
 	printf("during the right shift, %hu, bits are lost\n", rIGHTloss);
 	
+	// exs 30 - 32 - negation with unsigned
+	printf("\nexercises 30 through 32\n");
+	/*
+	A 			= 	0000000011110000 = 240   = 0x00F0
+	~A       	=	1111111100001111 = 287   = 0xFF0F
+	~A + 1 		= 	1111111100010000
+	maxS 		= 	1111111111111111 = 65535 = 0xFFFF
+	A + ~A 		= 	""			  "" 
+	*/
+
+	unsigned short maxS = USHRT_MAX;
+	unsigned short nOTa = ~A;
+
+	// 30
+	printf("A: %hu and ~A: %hu\n", A, nOTa);
+	printf("A + ~A: %hu = max: %hu\n", (A + nOTa), maxS);
+
+	// 31
+	unsigned short proofX = 0x0004;
+	unsigned short proof = proofX + maxS;
+
+	printf("x = %hu, and maxS = %hu\n", proofX, maxS);
+	printf("x plus maxS: %hu\n", proof);
+
+	// 32
+	unsigned short proof2 = A + (~A + 1);
+	printf("A plus %hu = %hu\n", (~A + 1), proof2);
+
+	// exs 33 - show that INT_MAX + INT_MIN = -1
+	printf("\nexercise 33\n");
+
+	printf("%d\n", (INT_MAX+INT_MIN));
 
 	return 0;
 }
